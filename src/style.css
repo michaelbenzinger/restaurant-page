@@ -1,0 +1,104 @@
+::-webkit-scrollbar {
+  background-color: #27292a;
+  color: #afaaa2;
+}
+::-webkit-scrollbar-corner {
+  background-color: #1f2021;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #4c5052;
+}
+:root {
+  --dark-background: #182949;
+  --dark-gray: #1e2024;
+  --basic-red: rgb(228, 62, 56);
+}
+html {
+  font-size: 1.1em;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  background-color: var(--dark-background);
+}
+header {
+  width: 100%;
+  font-size: 0.9em;
+  background-color: var(--dark-gray);
+  color: white;
+}
+nav {
+  padding: 1.2em;
+  width: 75%;
+  margin: 0 auto;
+}
+header span {
+  padding: 0 1em;
+}
+.hero-section {
+  height: 70vh;
+  min-height: 40em;
+  width: 100%;
+  background-color: #24262b;
+  display: flex;
+  flex-direction: row;
+}
+.hero-photo {
+  /* background: url("pizza-hero.jpg") fixed center; */
+  /* background-color: blue; */
+  height: 100%;
+  width: 60vw;
+}
+.hero-copy {
+  background-color: whitesmoke;
+  height: 100%;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-copy-content {
+  width: 60%;
+  padding-bottom: 4em;
+}
+h1 {
+  font-size: 3.3em;
+  font-weight: bold;
+  padding-bottom: 0.3em;
+}
+.hero-copy-content p {
+  font-size: 1.2em;
+  padding-bottom: 0.5em;
+}
+.hero-copy-content button {
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 1.5em 0;
+  padding: 0.7em 1.9em;
+  border-radius: 1em;
+  border: none;
+  background-color: var(--basic-red);
+  color: white;
+}
+.about-section {
+  padding: 6em 0;
+  background-color: var(--dark-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-content {
+  color: white;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  width: 45%;
+  max-width: 45em;
+}
+.about-content h2 {
+  font-size: 1.1em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;;
+  font-weight: bold;
+}
+.about-content p {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
