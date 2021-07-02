@@ -12,6 +12,8 @@ export default function displayHome(pageContent) {
   aboutSection.classList.add('about-section');
   displayAboutSection(aboutSection);
   pageContent.appendChild(aboutSection);
+
+  return 'Home';
 }
 
 function displayHeroPhoto(heroSection) {

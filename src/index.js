@@ -5,8 +5,8 @@ import displayContact from './contact.js'
 import displayMenu from './menu.js'
 
 const pageContent = document.querySelector('#content');
-console.log(pageContent);
-console.log("We are working!");
+const body = document.querySelector('body');
+let currentPage = '';
 
 function displayNav() {
   const head = document.createElement('header');
@@ -15,11 +15,32 @@ function displayNav() {
   navItems.forEach(page => {
     const navItem = document.createElement('a');
     navItem.innerHTML = page;
+    navItem.addEventListener('click', function(e){
+      if (currentPage != e.target.innerText) {
+        removeAllContent();
+        if (e.target.innerText == 'Home') {
+          currentPage = displayHome(pageContent);
+        } else if (e.target.innerText == 'Contact') {
+          currentPage = displayContact(pageContent);
+        } else if (e.target.innerText == 'Menu') {
+          currentPage = displayMenu(pageContent);
+        }
+      }
+    });
     nav.appendChild(navItem);
   });
-  pageContent.appendChild(head);
+  body.insertBefore(head, pageContent);
   head.appendChild(nav);
 }
 
+function removeAllContent() {
+  while (pageContent.firstChild) {
+    pageContent.removeChild(pageContent.lastChild);
+  }
+  pageContent.childNodes.forEach(node => {
+    node.remove();
+  });
+}
+
 displayNav();
-displayHome(pageContent);
+currentPage = displayHome(pageContent);
