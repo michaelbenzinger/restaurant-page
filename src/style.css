@@ -12,6 +12,7 @@
   --dark-background: #182949;
   --dark-gray: #1e2024;
   --basic-red: rgb(228, 62, 56);
+  --lighter-red: rgb(236, 91, 86);
 }
 html {
   font-size: 1.1em;
@@ -29,7 +30,7 @@ nav {
   width: 75%;
   margin: 0 auto;
 }
-header span {
+header a {
   padding: 0 1em;
 }
 .hero-section {
@@ -67,7 +68,7 @@ h1 {
   font-size: 1.2em;
   padding-bottom: 0.5em;
 }
-.hero-copy-content button {
+button {
   font-size: 1em;
   font-weight: bold;
   text-transform: uppercase;
@@ -77,6 +78,11 @@ h1 {
   border: none;
   background-color: var(--basic-red);
   color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: var(--lighter-red);
 }
 .about-section {
   padding: 6em 0;
