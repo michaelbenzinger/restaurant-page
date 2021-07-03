@@ -26,6 +26,7 @@ function displayNav() {
           currentPage = displayMenu(pageContent);
         }
       }
+      eventListeners();
     });
     nav.appendChild(navItem);
   });
@@ -42,5 +43,22 @@ function removeAllContent() {
   });
 }
 
+function eventListeners () {
+  const buttons = document.querySelectorAll('button');
+  buttons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      removeAllContent();
+      if (button.dataset.callback == 'displayHome') {
+        currentPage = displayHome(pageContent);
+      } else if (button.dataset.callback == 'displayContact') {
+        currentPage = displayContact(pageContent);
+      } else if (button.dataset.callback == 'displayMenu') {
+        currentPage = displayMenu(pageContent);
+      }
+    });
+  });
+}
+
 displayNav();
 currentPage = displayHome(pageContent);
+eventListeners();

@@ -38,6 +38,7 @@ function displayHeroCopy(heroSection) {
   const subtitle = document.createElement('p');
   subtitle.innerText = 'Rated #1 in 2020';
   const button = document.createElement('button');
+  button.dataset.callback = 'displayMenu';
   button.innerText = 'Order Now';
   heroCopyContent.appendChild(title);
   heroCopyContent.appendChild(subtitle);
